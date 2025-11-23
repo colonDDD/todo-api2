@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "title": "Zakupy",
+    "description": "Mleko, chleb, maslo",
+    "completed": false,
+    "createdAt": "2025-11-23T15:18:15.901Z"
+  }
+]
