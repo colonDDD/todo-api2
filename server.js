@@ -121,8 +121,12 @@ app.use((req, res) => {
   res.status(404).json({ error: "Not Found" });
 });
 
+// --- START SERWERA TYLKO JEŚLI PLIK JEST URUCHAMIANY BEZPOŚREDNIO ---
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+  });
+}
 
-// --- START SERWERA ---
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+// --- EXPORT APP DO TESTÓW ---
+module.exports = app;
